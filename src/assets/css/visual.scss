@@ -1,0 +1,296 @@
+$width: 1220px;
+$marginBottom: 24px;
+$color:#f7f7f7;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+.vue-grid-item{
+  border: 1px dotted transparent;
+
+}
+.vue-grid-item.vue-draggable-dragging{
+   border: 1px dotted blue;
+}
+.vue-grid-item.active{
+  border: 1px dotted blue;
+}
+.vue-grid-layout .resizing{
+  border: 1px dotted blue;
+}
+ .vue-grid-item.vue-grid-placeholder {
+  background: black !important;
+  opacity: 0 !important;
+  transition-duration: 100ms;
+  z-index: 2;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.visual-banner-module {
+  cursor: pointer;
+  width: 1200px;
+  background: gray;
+  min-height: 120px;
+  margin-bottom: $marginBottom;
+  position: relative;
+  a {
+    font-size: 0;
+  }
+}
+
+.visual-banner-img {
+  max-width: $width;
+  display: block;
+}
+
+.v-module{
+  position: relative;
+  padding: 10px;
+  >*{
+    position: relative;
+    z-index: 20;
+  }
+}
+
+.visual-floor-module {
+  cursor: pointer;
+  width: $width;
+  
+  margin:  0 auto $marginBottom auto;
+  
+}
+
+.floor-inline-block {
+  float: left;
+  display: inline-block;
+  margin-right: 12px;
+ 
+  &::last-child {
+    margin-right: 0;
+  }
+}
+
+.visual-floor-header {
+  overflow: hidden;
+  height: 35px;
+  width: 1200px;
+  margin-bottom: 15px;
+  position: relative;
+  background: $color;
+}
+
+.floor-header-name {
+  margin: 0;
+  display: inline-block;
+  font-size: 20px;
+  color: #333;
+  line-height: 35px;
+  margin-right: 10px;
+}
+
+.floor-header-tag {
+  display: inline-block;
+  width: 4px;
+  height: 20px;
+  background: #3ad2a7;
+  position: relative;
+  top: 2px;
+}
+
+.floor-header-sub {
+  margin: 0;
+  display: inline-block;
+  font-size: 12px;
+  color: #333;
+  vertical-align: text-bottom;
+  line-height: 17px;
+}
+
+.floor-header-link {
+  line-height: 35px;
+  a {
+    font-size: 14px;
+    color: #666;
+    margin-right: 25px;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      color: #c70000;
+    }
+  }
+}
+
+.floor-ad {
+  position: relative;
+  width: 293px;
+  height: 497px;
+  background: gray;
+  cursor: pointer;
+}
+
+.floor-brand {
+  position: relative;
+  background: red;
+  &-items {
+    width: 95 * 3px;
+    overflow: hidden;
+  }
+  &-item {
+    width: 95px;
+    height: 79px;
+    line-height: 95px;
+    background: #fff;
+    border-right: 1px solid #f5f5f5;
+    border-bottom: 1px solid #f5f5f5;
+    float: left;
+    text-align: center;
+    img {
+      max-width: 95px;
+     
+    }
+  }
+}
+.floor-slider {
+  margin-top: 12px;
+  position: relative;
+  width: 285px;
+  height: 341-14px;
+  background: gray;
+  img{
+    max-width: 285px;
+  }
+}
+.floor-product-warpper {
+  height: 497px;
+  width: 598px;
+  margin-right: 0;
+  overflow: hidden;
+}
+.floor-product {
+  position: relative;
+  width: 293px;
+  height: 158px;
+  background: gray;
+  float: left;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  a{
+    font-size: 0; 
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+  img{
+    max-width: 293px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+  }
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+  &:nth-last-child(1) {
+    margin-bottom: 0;
+  }
+  &:nth-last-child(2) {
+    margin-bottom: 0;
+  }
+}
+
+
+// form
+.v-form-container{
+  overflow: hidden;
+}
+.v-form-panel{
+  width: 360px;
+  border: 1px solid black;
+  height: 500px;
+  float: left;
+}
+.v-form-body{
+  width: 960px;
+  height: 100%;
+  overflow: scroll;
+  border: 1px solid red;
+  float: left;
+}
+.v-config-container{
+  float: left;
+  width: 360px;
+  border: 1px solid black;
+  height: 500px;
+}
+.form-item{
+  padding: 10px 30px;
+  position: relative;
+  input{
+    width: 100%;
+  }
+  &-block{
+     display: block;
+  }
+  &-inline{
+    display:inline-block;
+  }
+  .v-mask{
+   position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  background:transparent;
+  z-index: 44; 
+  visibility: hidden;
+  }
+}
+
+.form-item-group{
+  .form-item{
+    display: inline-block;
+  }
+}
+.form-item-pannel{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px dotted blue;
+  top:0;
+  left: 0;
+}
+.form-item-move{
+  width: 20px;
+  height: 20px;
+  background: red;
+  position: absolute;
+  &.up{
+    left: 50%;
+    top:-10px;
+  }
+ 
+&.down{
+  left: 50%;
+  bottom:-10px;
+  background: blue;
+  z-index: 55;
+  cursor: pointer;
+}
+}
+
+.v-main .move-pleacehold{
+  width: 100%;
+  height: 40px;
+  background: rgba($color: #000000, $alpha:0.4);
+  > div{
+    display: none;
+  }
+}

@@ -1,0 +1,186 @@
+.cms-breadcrumb{
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  background: #fafafa;
+  font-size: 14px;
+  color: #444;
+  padding: 0 17px;
+  border-bottom:1px solid #f0f0f0;
+  &-items{
+    float: left;
+    li{
+      float: left;
+    }
+  }
+  &-back{
+    float: right;
+    cursor: pointer;
+    position: relative;
+    .iconfont{
+      font-size: 14px;
+    }
+    }
+}
+.cms-breadcrumb-tooltip{
+  position: absolute;
+  padding: 9px 10px;
+  border-radius: 3px;
+   top: 36px;
+   z-index: 2;
+   right: -10px;
+  font-size: 12px;
+  color: #fff;
+  line-height: 1;
+  word-break:keep-all;  
+ white-space:nowrap;  
+  background-color: #454545;
+  box-shadow: 0 1px 7px rgba(0, 0, 0, .17);
+  &:after{
+    display: block;
+    content:'';
+    top:-5px;
+    right: 13px;
+    position: absolute;
+    width: 0;
+   height: 0;
+   border-left: 4px solid transparent;
+   border-right: 4px solid transparent;
+   border-bottom: 5px solid #454545;
+  }
+}
+.cms-breadcrumb-enter-active,
+.cms-breadcrumb-leave-active {
+ transition: all .15s 
+}
+
+.cms-breadcrumb-enter,
+.cms-breadcrumb-leave-to {
+ opacity: 0;
+ transform: scale(.3);
+}
+.cms-breadcrumb-leave,
+.cms-breadcrumb-enter-to {
+ opacity: 1;
+ transform: scale(1);
+}
+
+.flex-between{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.v-panel{
+  &-container{
+    width: 340px;
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 100%;
+    background: #fff;
+    z-index:99;
+    border-right: 1px solid #eaeaea;
+  }
+  &-header{
+    position: relative;
+    width: 100%;
+    height: 95px;
+   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+   padding: 15px 20px;
+  
+   .icon-youjiantou-copy{
+     font-size: 20px;
+     color: #444;
+     cursor: pointer;
+   }
+   .v-global-btn{
+    cursor: pointer;
+     font-size: 14px;
+     color: #444;
+     .iconfont{
+       font-size: 16px;
+     }
+   }
+  }
+}
+.v-title{
+  position: absolute;
+  text-align: center;
+  color: #c7c7c7;
+  font-size: 14px;
+  bottom: 16px;
+   left: 50%;
+   margin-left: -51px; 
+}
+.v-panel-body{
+  overflow:auto; 
+  padding: 20px;
+  height: calc(100% - 95px);
+  p{
+    font-size: 14px;
+    color: #444444;
+  }
+}
+.draggable-module-type{
+  margin-bottom: 25px;
+  overflow: hidden;
+  .vddl-draggable{
+    float: left;
+    margin-right: 20px;
+    cursor: move;
+    &:last-child{
+      margin-right:0;
+    }
+  }
+}
+.draggable-module{
+ display: block;
+ background: #fff;
+  width: 80px;
+  text-align: center;
+  span{
+    display: inline-block;
+    outline: none;
+    color: #999999;
+    font-size: 12px;
+  }
+}
+
+.visual-main{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.drop-warper{
+  width: 100%;
+  height: 100%;
+}
+.visual-body{
+  width: 100%;
+  height: 100%;
+  overflow:auto;
+}
+.vis-placeholder{
+  width: 1200px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin: 0 auto 22px auto;
+  border: 1px dashed #ccc;
+}
+.v-mask{
+  position: relative; 
+&::before{
+   visibility: hidden;
+   content:'';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: rgba(236,243,253,.3)  
+}
+&:hover{
+  &::before{
+    visibility: visible;  
+ }
+}
+}
